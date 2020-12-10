@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   def index #indexを定義した
     @posts = Post.all.order(id: "DESC") #全てのレコードをpostsに代入
   end
@@ -20,4 +19,5 @@ class PostsController < ApplicationController
     item = Post.find(params[:id])
     render json: { post: item }
   end
+
 end
